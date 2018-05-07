@@ -54,13 +54,21 @@ lines= fi.readlines()
 
 for line in lines:
 	l = string.split(line)
-	if verbose > 1:
+
+  if verbose > 0:
+		try:
+			print("%s" % line),
+		except:
+			print("Could not print line '%s' " % line)
+
+	elif verbose > 1:
 		print("Processing line: '%s'" % l )
 
-	try:
-		print("")
-	except:
-		print("Could not convert data.  Ignoring: '%s'" % string.strip(line) )
+		try:
+			print("")
+		except:
+			print("Could not convert data.  Ignoring: '%s'" % string.strip(line) )
+
 
 
 

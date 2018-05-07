@@ -54,7 +54,8 @@ lines= fi.readlines()
 
 for line in lines:
 	l = string.split(line)
-	if verbose > 0:
+
+  if verbose > 0:
 		try:
 			print("%s" % line),
 		except:
@@ -67,6 +68,7 @@ for line in lines:
 			print("")
 		except:
 			print("Could not convert data.  Ignoring: '%s'" % string.strip(line) )
+
 
 
 
